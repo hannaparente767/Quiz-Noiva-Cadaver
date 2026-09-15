@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- 
+Arquivo: index.html
+Função: estrutura (markup) do quiz. Aqui colocamos os elementos que o usuário vê:
+título, área de pergunta, opções, botão "Próxima" e onde mostrar o resultado.
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Responsivo: garante que em telas pequenas (celular) a página se adapte -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz A Noiva-Cadáver</title>
+
+    <!-- Link para o arquivo CSS externo (estilos) -->
+     <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+    Container principal do quiz.
+    Mantemos tudo dentro de um bloco para facilitar estilização e centralização.
+    -->
+    <div class="quiz-container">
+        <h1 class="quiz-title">Quiz A Noiva-Cadáver</h1>
+
+        <!--
+        Área onde a pergunta e as opções vão aparecer.
+        Usamos ids para acessá-los com JavaScript.
+        -->
+        <div id="question-container">
+            <!-- Aqui a pergunta será inserida dinamicamente -->
+             <p id="question">A pergunta aparecerá aqui</p>
+
+             <!--
+             Este div receberá, via JavaScript, os botões/opções de resposta.
+             Deixar vazio no HTML; o script preenche.
+             -->
+             <div id="options"></div>
+        </div>
+
+        <!-- Botão para ir para a próxima pergunta.
+             Inicialmente pode estar escondido; o JS controla sua visibilidade. -->
+        <button id="next-btn">PRÓXIMA</button>
+
+        <!-- Parágrafo para mostrar feedback (acertou/errou) ou resultado final -->
+        <p id="result"></p>
+    </div>
+
+    <!-- Link para o arquivo JavaScript que controla a Lógica do quiz -->
+     <script src="script.js"></script>
+    
+</body>
+</html>

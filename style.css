@@ -1,0 +1,128 @@
+/*
+Arquivo: style.css
+Função: estilizar o quiz para ficar agradável.
+*/
+
+/* ===== ESTILOS GERAIS ===== */
+body {
+  background-image: url(imagem/noiva.png);
+  background-size: cover;
+  background-position: center 25%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.quiz-container {
+  width: 500px;
+  padding: 25px;
+  border-radius: 5px;
+  background: rgba(3, 37, 97, 0.678);
+  color: #bde5eb;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(100, 180, 255, 0.3);
+  font-size: large;
+  border: 1px solid rgba(125, 191, 253, 0.5);
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.6),
+    0 0 18px rgba(100,180,255,0.08),
+    0 0 6px rgba(8, 53, 95, 0.6) inset;
+  transition: all 220ms ease;
+}
+
+.quiz-container:hover {
+  box-shadow:
+    0 14px 40px rgba(0,0,0,0.6),
+    0 0 30px rgba(100,180,255,0.18),
+    0 0 12px rgba(100,180,255,0.9) inset;
+  transform: translateY(-4px);
+}
+
+/* ===== TÍTULO DO QUIZ ===== */
+.quiz-title {
+  font-size: 2.4em;
+  color: #beddfc;
+  height: 40px;
+  text-align: center;
+  font-family: 'Cinzel Decorative', serif;
+  text-shadow:
+    2px 2px 4px rgba(0, 0, 0, 0.6),
+    0 0 10px rgba(100, 180, 255, 0.3);
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  transition: all 0.3s ease;
+}
+
+.quiz-title:hover {
+  text-shadow:
+    0 0 10px #b3e1ff,
+    0 0 20px #66baff,
+    0 0 40px #338cff,
+    0 0 60px rgba(100,170,255,0.8);
+  transform: scale(1.03);
+}
+
+/* ===== BOTÃO ===== */
+button {
+  font-family: Georgia;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: rgba(140, 228, 240, 0.829);
+  background: #86c5e496;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.9s ease;
+}
+
+button:hover {
+  background: #001646b4;
+  transform: scale(1.05);
+}
+
+/* ===== OPÇÕES ===== */
+.option {
+  font-family: playfair display;
+  font-size: large;
+  color: #ffffff;
+  width: 500px;
+  display: block;
+  background: #aedfff54;
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.15s;
+}
+
+.option:hover {
+  background: #00164686;
+  color:#ffffff;
+}
+
+.option.selected {
+    background-color: #00164686; /* cor quando selecionada */
+    border-color: #222;
+    transform: scale(1.02);
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 600px) {
+  .quiz-container {
+    width: 90%;
+    padding: 16px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
